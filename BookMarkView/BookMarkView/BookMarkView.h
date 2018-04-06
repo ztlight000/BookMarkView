@@ -110,7 +110,7 @@ typedef void(^contentDidEndScrool)(NSInteger index);
 //- (void)exchangeItemFormIndex:(NSInteger)formIndex toIndex:(NSInteger)toIndex;
 
 //添加
-//- (void)addItemWithHeadItem:(NSObject *)headItem withContentItem:(NSObject *)contentItem;
+//- (void)addItemWithHeadItem:(NSObject *)headItem withContentItem:(NSObject *)contentItem atIndex:(NSInteger)atIndex;
 
 @end
 

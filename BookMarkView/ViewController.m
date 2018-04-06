@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ProgramPageController.h"
 
 @interface ViewController ()
 
@@ -15,15 +16,36 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"首页";
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 170, 44)];
+    
+    [nextBtn addTarget:self action:@selector(nextBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    nextBtn.backgroundColor = [UIColor redColor];
+    
+    [nextBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [nextBtn setTitle:@"前往BookMark" forState:UIControlStateNormal];
+    
+    [self.view addSubview:nextBtn];
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)nextBtnClick {
+    
+    ProgramPageController *programVC = [[ProgramPageController alloc] init];
+    
+    [self.navigationController pushViewController:programVC animated:YES];
+    
 }
-
 
 @end
+
+
+
